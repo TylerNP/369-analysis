@@ -86,4 +86,4 @@ if __name__ == '__main__':
     conn.commit()
     conn.close()
     end_time = time.perf_counter_ns()
-    print(f"Time elapsed: {(end_time-start_time)/100000} ms")
+    print(f"Time elapsed: {(end_time-start_time)/1000000} ms")
