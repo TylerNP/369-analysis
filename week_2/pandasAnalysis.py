@@ -5,7 +5,7 @@ import pandas as pd
 
 def countMostCommon(min : int, max : int) -> None:
     df = pd.read_parquet(util.db_path, engine='pyarrow')
-    df = df[(df['timedelta'] >= start) & (df['timedelta'] < end)]
+    df = df[(df['timedelta'] >= min) & (df['timedelta'] < max)]
     x, y= df.groupby(['x', 'y']).size().idxmax()
     print(f"Most used color: #{(df['color'].value_counts().idxmax()):06x} ")
     print(f"Most used coord: ({x}, {y})")
