@@ -4,11 +4,11 @@ import time
 import sys
 
 def countMostCommon(min : int, max : int) -> None:
-    db = polars.read_parquet(util.db_path).filter(
+    db = polars.scan_parquet(util.db_path).filter(
             (polars.col("timedelta") >= start) & (polars.col("timedelta") < end)
         ).select(["color", "x", "y"])
-    color = db.group_by("color").agg(polars.len().alias("count")).top_k(k=1, by="count")
-    coord = db.group_by("x", "y").agg(polars.len().alias("count")).top_k(k=1, by="count")
+    color = db.select("color").group_by("color").agg(polars.len().alias("count")).top_k(k=1, by="count").collect()
+    coord = db.select("x", "y").group_by("x", "y").agg(polars.len().alias("count")).top_k(k=1, by="count").collect()
     
     print(f"Most used color: #{(color["color"][0]):06x} ")
     print(f"Most used coord: {coord["x"][0], coord["y"][0]}")
