@@ -1,2 +1,8 @@
 /Data
 ./
+/week_1/analyzeDictionary.py
+/data_preprocessing/lossyCSV.py
+.venv/
+__pycache__
+*.ipynb
+.DS_STORE
