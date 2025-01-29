@@ -93,7 +93,7 @@ def countMostCommon(min : int, max : int) -> None:
     ), session_avg AS (
         SELECT
             user_id,
-            (60*SUM(session_length)) / COUNT(1) AS avg_length
+            (60.0*SUM(session_length)) / COUNT(1) AS avg_length
         FROM
             session_time
         GROUP BY
@@ -104,6 +104,8 @@ def countMostCommon(min : int, max : int) -> None:
         AVG(avg_length)
     FROM 
         session_avg
+    WHERE
+        avg_length != 0
     """).fetchone()
 
     # Pixel Percentiles

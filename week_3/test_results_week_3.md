@@ -25,14 +25,14 @@
     16. purple: 29539 users
 
 ### Average Session Length
-- **Output:** 1587.17 s
+- **Output:** 1587.23 s
 
 ### Percentiles of Pixels Placed
 - **Output:**
   - 50th Percentile: 2 pixels
   - 75th Percentile: 4 pixels
   - 90th Percentile: 11 pixels
-  - 99th Percentile: 3 pixels
+  - 99th Percentile: 33 pixels
 
 ### Count of First-Time Users
 - **Output:** 1062702 users
