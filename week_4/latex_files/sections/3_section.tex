@@ -12,15 +12,43 @@ The next two most contested pixels are exactly 10 pixels apart in the x axis. Du
     \caption{Most recent pixel placements in a 70x70 grid around centering on (349, 564) }
 \end{figure}
 
-\subsection{Why The Eyes?}
+\subsection{Why So Much Focus On The Eyes?}
 
 Despite encompassing an area roughly 35 x 65 pixels, the eyes drew the most user placements. From this, I assumed that it may have been a conflict between two groups that wanted different eye colors for the skeleton. To verify this assumption, I looked into to the top colors used at the locations. If a conflict occurred, then the two top colors should be the same for both eyes and should be relatively much larger than the other colors. 
- The right eye had 34726 black pixels placed, 26940 light blue pixels, and 1656 red pixels as the top three. The left eye had 27804 black pixels placed, 19404 light blue pixels, and 2120 red pixels as the top three. From this, it can be seen that black and light blue were orders of magnitude greater than the next most common color and that it was likely the product of the conflict between two groups.
+From figure 4.b, it can be seen that black and light blue were orders of magnitude greater than the next most common color and that it was likely the product of the conflict between two groups.
 
-\begin{figure}[H]
-\centering
-\animategraphics[loop,autoplay, width=100pt]{3}{visuals/349_564_10_mode_0_}{0}{83}
-    \caption{Animation of most common placements around the left eye. \\ Note: The center of the eyes remain black during the animation as it was most fiercely defended, but this can be seen at other parts of the eyes as users were more lax around these parts}
+\begin{figure}[H]%
+    \centering
+    \subfloat[\centering Top 3 Colors Used]{
+        {
+        \begin{tabular}{ | c | c | c | }
+        \hline
+        &&\\[-1em]
+        &&\\[-1em]
+        color & (349, 564) & (359, 564) \\ 
+        \hline \hline
+        &&\\[-1em]
+        &&\\[-1em]
+         black & 27804 & 34726 \\
+        \hline
+        &&\\[-1em]
+        &&\\[-1em]
+         light blue & 19404 & 26940  \\
+        \hline
+        &&\\[-1em]
+        &&\\[-1em]
+         red & 2120 & 1656 \\
+        \hline
+        \end{tabular}
+        }
+    }
+    \qquad
+    \subfloat[\centering Left Eye Animation]{
+        {
+        \animategraphics[loop,autoplay, width=85pt]{3}{visuals/349_564_10_mode_0_}{0}{83}
+        }
+    }
+    \caption{Animation of the left eyes with the top 3 most used colors. \\ Note: The center of the eyes remain black due to the fierce defense. The blue is more seen around the eyes due to the looser protection.}
 \end{figure}
 
 
