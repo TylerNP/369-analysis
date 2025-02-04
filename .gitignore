@@ -4,5 +4,6 @@
 /data_preprocessing/lossyCSV.py
 .venv/
 __pycache__
-*.ipynb
+/week_3/analyze.ipynb
 .DS_STORE
+/week_4/visualizations
