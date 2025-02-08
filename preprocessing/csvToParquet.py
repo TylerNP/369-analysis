@@ -1,8 +1,13 @@
 import pyarrow.csv as pc
 import pyarrow.parquet as pq
+import sys
 
-path = r"../data/user_2022_place_history.csv"
-write = r"../data/user_2022_place_history.parquet"
+if len(sys.argv) != 2:
+    print("Must include a csv filename do not include file extension")
+    exit()
+
+path = f"../data/{sys.argv[1]}.csv"
+write = f"../data/{sys.argv[1]}.parquet"
 
 table = pc.read_csv(path)
 pq.write_table(table, write)
