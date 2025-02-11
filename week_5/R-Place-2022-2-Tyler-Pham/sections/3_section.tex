@@ -1,0 +1,52 @@
+{\color{gray}\hrule}
+\section{Comparison Duckdb Vs. PySpark}
+{\color{gray}\hrule}
+
+\subsection{Memory}
+The parquet file containing the data in parquet form was 1.84 Gigs.Looking at the Duckdb version, loading the parquet file into memory took anywhere between 8-10 Gigs of memory, while the PySpark version only took about 2 Gigs of memory. 
+
+\subsection{CPU}
+The reverse is true in regards to CPU usage. Running the same queries in Duckdb resulted in almost negligible CPU usage compared to my idle. On the other hand, PySpark had a much higher CPU demand usage demanded upwards of 50 percent for a query.
+
+\subsection{Time}
+Similarly to the CPU section, Duckdb performed almost all queries sub 1 second, but PySpark took at minimum 1 second. 
+
+% \begin{figure}[H]
+% \centering
+% \includegraphics{visuals/349_564_35_80_mode_1}
+%     \caption{Most recent pixel placements in a 70x70 grid around centering on (349, 564) }
+% \end{figure}
+
+% \begin{figure}[H]%
+%     \centering
+%     \subfloat[\centering Top 3 Colors Used]{
+%         {
+%         \begin{tabular}{ | c | c | c | }
+%         \hline
+%         &&\\[-1em]
+%         &&\\[-1em]
+%         color & (349, 564) & (359, 564) \\ 
+%         \hline \hline
+%         &&\\[-1em]
+%         &&\\[-1em]
+%          black & 27804 & 34726 \\
+%         \hline
+%         &&\\[-1em]
+%         &&\\[-1em]
+%          light blue & 19404 & 26940  \\
+%         \hline
+%         &&\\[-1em]
+%         &&\\[-1em]
+%          red & 2120 & 1656 \\
+%         \hline
+%         \end{tabular}
+%         }
+%     }
+%     \qquad
+%     \subfloat[\centering Left Eye Animation]{
+%         {
+%         \animategraphics[loop,autoplay, width=85pt]{3}{visuals/349_564_10_mode_0_}{0}{83}
+%         }
+%     }
+%     \caption{Animation of the left eyes with the top 3 most used colors. \\ Note: The center of the eyes remain black due to the fierce defense. The blue is more seen around the eyes due to the looser protection.}
+% \end{figure}
