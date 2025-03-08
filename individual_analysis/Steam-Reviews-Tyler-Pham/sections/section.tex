@@ -10,7 +10,7 @@
     \label{fig:p50 Up Votes Vs. Funny Votes(100s)}
 \end{figure}
 
-For any given Steam review, the number of up votes signify the usefulness of a review. Steam users do not vote for a review solely on the basis of its usefulness or impact. I hypothesized that humor played a large impact on the up votes of a review.  I tested this by plotting the top 10,000 most voted reviews against the number of funny votes it receives in figure 1. The graph depicts the weak positive correlation between funny votes and up votes. This disproved my hypothesis and shows that humor generally played a smaller role. Note, the higher variation at the upper ends is a result of the smaller sample of highly rated funny reviews.
+ I my hypothesis by plotting the top 10,000 most voted reviews against the number of funny votes it receives in figure 1. The graph depicts the weak positive correlation between funny votes and up votes. This disproved my hypothesis and shows that humor generally played a smaller role. Note, the higher variation at the upper ends is a result of the smaller sample of highly rated funny reviews.
 
 \subsection{User role in reviews?}
 Given that humor plays a small role in a good review, I hypothesized that Steam users favored more knowledgeable and informative reviews. To define the knowledge of a user, it is the combination of the number of hours at playtime, the number of games the user own, and the number of reviews a user has written. 
@@ -19,7 +19,7 @@ Given that humor plays a small role in a good review, I hypothesized that Steam 
     \centering{}
     \caption{Avg Up Votes Vs. User Total Reviews}
 
-    \includegraphics[width=1\linewidth]{visuals/Avg Votes Up Vs. Owned Games (10s)}
+    \includegraphics[width=0.8\linewidth]{visuals/Avg Votes Up Vs. Owned Games (10s)}
     \label{fig:Average Up Votes Vs. Num Games Owned (10s)}
 \end{figure}
 
@@ -42,4 +42,4 @@ Given that humor plays a small role in a good review, I hypothesized that Steam 
     \caption{User Data Vs. Avg Up Votes}
 \end{figure}
 
-From the above, the number of games a user owned has a linear relationship to the number of up votes. This suggest that users with more owned games make better reviews than those with fewer games owned. This aligns with my hypothesis that users value experience in a review. On the other hand, good reviews hover around 10 hours of playtime and any other amount is seen as less useful. This is especially true after breaking around 170 hours where the up votes takes another dip. I think users may perceive these reviews to be more biased. On the other hand, the number of reviews a user has made seems to have a positive effect on up votes, but this stops at around 100 reviews.  
+From the above, the number of games a user owned has a linear relationship to the number of up votes. This suggest that users with more owned games make better reviews than those with fewer games owned. This aligns with my hypothesis that users value experience in a review. On the other hand, good reviews peak at 10 hours of playtime. Interestingly after 170 hours, the up votes takes another dip. I underestimated how much users viewed playtime as a sign of bias. On the other hand, the number of reviews a user has made seems to have a positive effect on up votes, but this stops at around 100 reviews. My hypothesis was partial correct, but I misunderstood playtime and overestimated the role of humor. 
